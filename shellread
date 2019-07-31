@@ -1,0 +1,45 @@
+# shell script
+
+Variable
+No need for space between two entities
+while adding up variables, need to be in double quotes
+MYVAR1=rosh
+MYVAR2=ravi
+fullname="$MYVAR1 $MYVAR2"
+
+Echo
+-n would make omit trailing line and end up on same line
+echo -n "enter name: "
+
+printf
+printf "my name is %s %s" rosh ravi
+
+printf "my name is %s %s \a" rosh ravi = \a bell
+printf "my name is %s %s \b" rosh ravi =  \b backspace
+printf "my name is %s %s \c" rosh ravi = \c supress final newline
+printf "my name is %s %s \f" rosh ravi = \f formfeed
+printf "my name is %s %s \n" rosh ravi = \n newline
+printf "my name is %s %s \r" rosh ravi = \r carriage return
+printf "my name is %s %s \t" rosh ravi = \t horizontal tab
+printf "my name is %s %s \v" rosh ravi = \v Vertical tab
+
+Special files
+/dev/null , also known as bit bucket
+data sent to this file is thrown away by system
+useful when you think the output is not needed
+ls /dev/null
+
+/dev/tty
+unix automatically send it to real terminal:
+
+
+printf "Enter pass : "
+stty -echo         # would turnoff ehco of pass
+read pass < /dev/tty
+
+set +x , turns on tracing
+
+Book :classic Shell scripting 
+arnold Robbns and Nelson H F Beebee
+chapter 3
+searching and substituation
