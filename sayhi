@@ -1,0 +1,4 @@
+# script to read name of person from keyboard
+echo "your first name please:"
+read fname
+echo "Hello $fname, Lets be friends"
